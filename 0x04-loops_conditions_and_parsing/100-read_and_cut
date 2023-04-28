@@ -1,12 +1,8 @@
 #!/bin/bash
 # Read and cut
 
-while read -r line
+while read -r passwd;
 do
-	username=$(echo "$line" | cut -d':' -f1)
-  	userid=$(echo "$line" | cut -d':' -f3)
-	homedir=$(echo "$line" | cut -d':' -f6)
-
-  	echo "$username:$userid:$homedir"
+	echo "$passwd" | cut -d ':' -f1,3,6
 done < /etc/passwd
 
