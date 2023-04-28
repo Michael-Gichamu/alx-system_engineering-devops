@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Read and cut
 
 while read -r passwd;
