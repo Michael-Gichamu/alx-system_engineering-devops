@@ -8,7 +8,8 @@ transfer protocols.
 ## Tasks :page_with_curl:
 
 * **0. OSI model**
-  * [0-OSI_model](./0-OSI_model): Text file answering the following questions: <p><img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/0fc96bd99faa7941b18bcae4c5f90c6acd11791d.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230525%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230525T123344Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=a4d7b10533528351aa8f0196ced7752bbeb4f24ac093a51352cc9faf19ef99af" alt="" loading="lazy" style=""></p>
+  * [0-OSI_model](./0-OSI_model): Text file answering the following questions: 
+   <p><img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/0fc96bd99faa7941b18bcae4c5f90c6acd11791d.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230525%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230525T123344Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=a4d7b10533528351aa8f0196ced7752bbeb4f24ac093a51352cc9faf19ef99af" alt="" loading="lazy" style=""></p>
 
   * What is the OSI model?
     1. Set of specifications that network hardware manufacturers must respect
@@ -25,6 +26,7 @@ transfer protocols.
 
 * **1. Types of network**
   * [1-types_of_network](./1-types_of_network): Text file answering the following questions:
+   <p><img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/4b995d4f8078b44afa968d68a98035d2bd7e8fac.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230525%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230525T123344Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=cb3bc9d418df2e79dfa74cd81253640ee80662dadfc04dd5b1e9d0bed13d620c" alt="" loading="lazy" style=""></p>
   * What type of network are Holberton iMacs connected to?
     1. Internet
     2. WAN
@@ -42,6 +44,8 @@ transfer protocols.
 
 * **2. MAC and IP address**
   * [2-MAC_and_IP_address](./2-MAC_and_IP_address): Text file answering the following questions:
+<p><img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/1e348ba3bcbb094b02922f821ffeb3d8c5438b7b.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230525%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230525T123344Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=228844a1bc6274a6b286e2ec9376763cc0dd87ef1430490177099f5da408b09f" alt="" loading="lazy" style=""></p>
+
   * What is a MAC address?
     1. The name of a network interface
     2. The unique identifier of a network interface
@@ -53,7 +57,8 @@ transfer protocols.
 
 * **3. UDP and TCP**
   * [3-UDP_and_TCP](./3-UDP_and_TCP): Text file answering the following questions
-  (boxes refer to an image provided by Holberton School):
+  <p><img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/3d92e3c4a470f8ecf4c73db511fcbbadaa002e1c.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230525%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230525T123344Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=dfc4abc5e56b4e087a2e576f006579c28e378750e839f9893836ebd1375505b4" alt="" loading="lazy" style=""></p>
+
   * Which statement is correct for the TCP box:
     1. It is a protocol that is transferring data in a slow way but surely
     2. It is a protocol that is transferring data in a fast way and might loss
