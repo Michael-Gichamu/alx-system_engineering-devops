@@ -3,9 +3,9 @@
 sudo apt-get update
 sudo apt-get install --no-install-recommends software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.7
-sudo apt-get install haproxy=2.8.\*
+sudo apt-get install haproxy=2.8
 
-echo "ENABLED=1" >> /etc/default/haproxy
+echo "ENABLED=1" >> sudo tee /etc/default/haproxy
 
 echo "
     frontend my_site
@@ -19,6 +19,6 @@ echo "
              option httpchk
              server 197588-web-01 100.25.188.172 check
              server 197588-web-02 18.209.178.215 check
-" >> /etc/haproxy/haproxy.cfg
+" >> sudo tee /etc/haproxy/haproxy.cfg
 
 sudo service haproxy start
