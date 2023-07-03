@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Installs, configures, and starts the load balancer
+sudo apt-get update
+sudo apt-get install --no-install-recommends software-properties-common
+sudo add-apt-repository ppa:vbernat/haproxy-2.7
+sudo apt-get install haproxy=2.8.\*
+
+echo "ENABLED=1" >> /etc/default/haproxy
+
+echo "
+    frontend my_site
+             bind *:80
+             mode http
+             option forwardfor
+             default_backend my_servers
+
+    backend my_servers
+             balance roundrobin
+             option httpchk
+             server 197588-web-01 100.25.188.172 check
+             server 197588-web-02 18.209.178.215 check
+" >> /etc/haproxy/haproxy.cfg
+
+sudo service haproxy start
