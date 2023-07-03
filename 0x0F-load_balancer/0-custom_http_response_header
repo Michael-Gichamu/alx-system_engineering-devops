@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Configures web-02 to be identical to web-01
+# HTTP header name must be X-Served-By
+# Value of the custom HTTP header must be the hostname of the server Nginx is running on.
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow "Nginx HTTP"
+sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
+echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
+
+if ! sudo grep -q "add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default; then
+        sudo sed -i '50i\               add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+fi
+
+if ! sudo grep -q "if (\$request_filename ~ redirect_me)" /etc/nginx/sites-enabled/default; then
+        sudo sed -i '51i\                if ($request_filename ~ redirect_me){\n                         rewrite ^ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n                }' /etc/nginx/sites-enabled/default
+fi
+
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
+
+if ! sudo grep -q "error_page 404 /404.html;" /etc/nginx/sites-enabled/default; then
+        sudo sed -i '47i\        error_page 404 /404.html;\n            location = /404.html {\n                root /var/www/html;\n           internal;\n             }' /etc/nginx/sites-enabled/default
+fi
+
+sudo service nginx restart
