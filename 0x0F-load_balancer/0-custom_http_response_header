@@ -9,8 +9,8 @@ sudo ufw allow "Nginx HTTP"
 sudo chown -R "$USER":"$USER" /var/www/html/index.nginx-debian.html
 echo "Hello World!" | sudo tee /var/www/html/index.nginx-debian.html
 
-if ! sudo grep -q "add_header X-Served-By \$hostname;" /etc/nginx/sites-available/default; then
-        sudo sed -i '50i\               add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+if ! sudo grep -q "add_header X-Served-By \$hostname;" /etc/nginx/sites-enabled/default; then
+        sudo sed -i '50i\               add_header X-Served-By $hostname;' /etc/nginx/sites-enabled/default
 fi
 
 if ! sudo grep -q "if (\$request_filename ~ redirect_me)" /etc/nginx/sites-enabled/default; then
