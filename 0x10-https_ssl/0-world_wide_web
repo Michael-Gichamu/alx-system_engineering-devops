@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+#Function to display information about a subdomain
+display_info() {
+  local domain=$1
+  local subdomain=$2
+  local rtype=$(dig $subdomain.$domain | awk '/ANSWER SECTION/ {getline; print $4}')
+  local dest=$(dig $subdomain.$domain |awl '/ANSWER SECTION/ {getline; print $5}')
+  echo "The subdomain $subdomain is a $rtype record that points to $dest"
+}
+
+#check if both domain and subdomain parameters are provided
+if [[ $# -eq 2 ]]; then
+  display_info $1 $2
+else
+  subdomains=("www" "ib-01" "web-01" "web-02")
+
+  for subdomain in "${subdomains[@]}"; do
+    display_info $1 $subdomain
+  done
+fi
