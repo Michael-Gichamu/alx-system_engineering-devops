@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+#World Wide Web
 #Function to display information about a subdomain
 display_info() {
   local domain=$1
