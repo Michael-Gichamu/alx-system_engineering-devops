@@ -8,7 +8,7 @@ display_info() {
   rtype=$(dig "$subdomain"."$domain" | awk '/ANSWER SECTION/ {getline; print $4}')
   local dest
   dest=$(dig "$subdomain"."$domain" | awk '/ANSWER SECTION/ {getline; print $5}')
-  echo "The subdomain $subdomain is a $rtype record that points to $dest"
+  echo "The subdomain $subdomain is a $rtype record and points to $dest"
 }
 
 #check if both domain and subdomain parameters are provided
