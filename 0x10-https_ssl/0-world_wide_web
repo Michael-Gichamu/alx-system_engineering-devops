@@ -15,7 +15,7 @@ display_info() {
 if [[ $# -eq 2 ]]; then
   display_info "$1" "$2"
 else
-  subdomains=("www" "ib-01" "web-01" "web-02")
+  subdomains=("www" "lb-01" "web-01" "web-02")
 
   for subdomain in "${subdomains[@]}"; do
     display_info "$1" "$subdomain"
