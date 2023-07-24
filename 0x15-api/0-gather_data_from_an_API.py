@@ -11,7 +11,7 @@ def main():
     """
     Displays: employee TODO progress.
               Title of completed tasks.
-    """  
+    """
     employeeid = int(sys.argv[1])
     total_task = 0
     done_task = 0
