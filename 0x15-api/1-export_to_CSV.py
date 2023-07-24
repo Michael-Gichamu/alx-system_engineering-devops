@@ -1,10 +1,17 @@
 #!/usr/bin/python3
+"""
+Uses REST API: https://jsonplaceholder.typicode.com
+"""
 import requests
 import sys
 import csv
 
 
 def main():
+    """
+    Records all tasks that are owned by this employee
+    Exports data in CSV format
+    """
     employeeid = int(sys.argv[1])
     total_task = 0
     done_task = 0
