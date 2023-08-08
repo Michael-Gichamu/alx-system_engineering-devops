@@ -17,10 +17,11 @@ def top_ten(subreddit):
 
     response = requests.get(url, headers=headers)
 
-    if response.status_code == 200:
-        data = response.json()
-        posts = data['data']['children']
-        for index, post in enumerate(posts):
-            print(f"{post['data']['title']}")
-    else:
-        return None
+    if response.status_code == 404:
+        print("None")
+        return
+
+    data = response.json()
+    posts = data['data']['children']
+    for index, post in enumerate(posts):
+        print(f"{post['data']['title']}")
